@@ -1,0 +1,54 @@
+@my_first_web_api_HostAddress = http://localhost:5249
+
+GET {{my_first_web_api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+GET {{my_first_web_api_HostAddress}}/api/pizza/
+Accept: application/json
+
+###
+
+GET {{my_first_web_api_HostAddress}}/api/pizza/3
+Accept: application/json
+
+###
+
+GET {{my_first_web_api_HostAddress}}/api/pizza/5
+Accept: application/json
+
+###
+
+POST {{my_first_web_api_HostAddress}}/api/pizza/
+Content-Type: application/json
+
+{
+  "name": "Hawaii",
+  "isGlutenFree": false
+}
+
+###
+POST {{my_first_web_api_HostAddress}}/api/pizza/
+Content-Type: application/json
+
+{
+  "name": "Chili's Favorite",
+  "isGlutenFree": true
+}
+
+###
+PUT {{my_first_web_api_HostAddress}}/api/pizza/3
+Content-Type: application/json
+
+{
+  "Id": 3,
+  "name": "Irina's Favorite",
+  "isGlutenFree": true
+}
+
+###
+
+DELETE {{my_first_web_api_HostAddress}}/api/pizza/2
+
+###
