@@ -1,8 +1,8 @@
 ﻿public static class PizzaService
 {
   private static List<Pizza> Pizzas { get; }
-  private static int nextId = 4;
-  // private static int nextId = Pizzas.Count + 1;
+  // private static int nextId = 4;
+  private static int nextId;
 
   static PizzaService()
   {
@@ -12,6 +12,8 @@
       new Pizza { Id = 2, Name = "Margherita", IsGlutenFree = true },
       new Pizza { Id = 3, Name = "Hawaiian", IsGlutenFree = false }
     };
+
+    nextId = Pizzas.Count + 1;
   }
   
   public static List<Pizza> GetAll() => Pizzas;
