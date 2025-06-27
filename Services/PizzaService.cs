@@ -1,4 +1,6 @@
-﻿public static class PizzaService
+﻿using my_first_web_api;
+
+public static class PizzaService
 {
   private static List<Pizza> Pizzas { get; }
   // private static int nextId = 4;
@@ -15,8 +17,19 @@
 
     nextId = Pizzas.Count + 1;
   }
-  
-  public static List<Pizza> GetAll() => Pizzas;
+
+  public static List<Pizza> GetAll()
+  {
+    int num = 5;
+    Console.WriteLine($"Before: {num}");
+
+    SimpleFunction.Assign(ref num);
+    
+    Console.WriteLine($"After: {num}");
+    
+    return Pizzas;
+  }
+  // public static List<Pizza> GetAll() => Pizzas;
 
   public static Pizza? Get(int id) => Pizzas.FirstOrDefault(p => p.Id == id);
 
